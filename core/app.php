@@ -1,28 +1,26 @@
 <?php
-
-/*
-    Autocarga de Facades && Container
+namespace GRDAR;
+/*  
+    Registro de Facades 
 */
-
-
-// Registro 
-
-$app = array(
-    'Router' => 'Rout',
-    'View' => '',
-    'Mail' => ''
+$class_alias = array(
+    'Rout'  => Facades\Router::class,
+    'View'  => Facades\View::class,
+    'Mail'  => Facades\Mail::class,
+    'Index' => Controllers\IndexController::class
 );
-
-foreach ($app as $key => $value) {
-    // print_r($app);
-    print_r('GRDAR'.DIRECTORY_SEPARATOR.'Facades'.DIRECTORY_SEPARATOR.$key, $value ? $value : $key);
+foreach ($class_alias as $key => $value) {
+    class_alias($value, $key);
 }
 
-
-// foreach ($app as $key => $value) {
-//     class_alias('GRDAR\Facades\Router', 'Rout');
-// }
-
-// class_alias('GRDAR\Facades\Router', 'Rout');
-// class_alias('GRDAR\Facades\View', 'View');
-// class_alias('GRDAR\Facades\Mail', 'Mail');
+/*  
+    Instanciar clase 
+*/
+$con = array(
+    'Rout'  => \Grdar\core\Routes\Router::class,
+    'View'  => \Grdar\core\Views\View::class,
+    'Mail'  => Mail\Mail::class
+);
+foreach ($con as $key => $value) {
+    $container->instance($key, new $value);
+}
