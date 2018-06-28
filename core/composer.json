@@ -1,0 +1,23 @@
+{
+    "name": "grdar/core-estructura",
+    "description": "Estructura inicial para un proyecto",
+    "type": "project",
+    "license": "",
+    "authors": [{
+        "name": "Team developer GRDAR",
+        "email": "dani@grdar.com"
+    }],
+    "require": {
+        "filp/whoops": "^2.1",
+        "grdar/core": "^2.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "files": ["utils/helpers.php"],
+        "psr-4": {
+            "GRDAR\\": "classes/"
+        }
+    }
+}
