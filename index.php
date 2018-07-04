@@ -1,6 +1,7 @@
 <?php
     ob_start();
-    session_start();
+
+    session_status() != PHP_SESSION_NONE ?? session_start();
 
     require_once __DIR__.'/core/init.php';
 
@@ -8,4 +9,6 @@
     
 	Rout::add('/', 'Index::index');
 	
-  	Rout::run();
+    Rout::run();
+    
+    ob_end_flush();

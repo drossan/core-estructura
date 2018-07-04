@@ -1,26 +1,26 @@
 <?php
 namespace GRDAR;
-/*  
-    Registro de Facades 
-*/
-$class_alias = array(
-    'Rout'  => Facades\Router::class,
-    'View'  => Facades\View::class,
-    'Mail'  => Facades\Mail::class,
-    'Index' => Controllers\IndexController::class
-);
-foreach ($class_alias as $key => $value) {
-    class_alias($value, $key);
-}
 
-/*  
-    Instanciar clase 
-*/
-$con = array(
-    'Rout'  => \Grdar\core\Routes\Router::class,
-    'View'  => \Grdar\core\Views\View::class,
-    'Mail'  => Mail\Mail::class
-);
-foreach ($con as $key => $value) {
-    $container->instance($key, new $value);
+use GRDAR\Facades\CreateFacade;
+
+$app = require_once __DIR__ .'/config.php';
+
+foreach ($app as $key => $value) {
+    switch ($key) {
+        case 'Controllers':
+            foreach ($value as $k => $controller) {
+                class_alias("$controller", $k);            
+            }
+            break;
+        case 'Facades':
+            foreach ($value as $k => $facade) {
+                new CreateFacade($facade, $k);
+            }
+            break;
+        default:
+            foreach ($value as $k => $instance) {
+                $container->instance($k, new $instance);
+            }
+            break;
+    }
 }

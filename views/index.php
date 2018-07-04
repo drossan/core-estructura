@@ -11,3 +11,7 @@
         </div>
     </div>
 </div>
+
+<?php 
+
+print_r(Test::getTest());
