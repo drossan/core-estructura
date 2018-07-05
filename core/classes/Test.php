@@ -2,13 +2,14 @@
 namespace GRDAR;
 
 use Grdar\core\Model;
+use Grdar\core\Pagination\PaginateTemplate;
 
 class Test extends Model
 {
     public function getTest()
     {
         return $this->setQuery("SELECT * FROM test")
-            ->paginate(\Grdar\core\Pagination\PaginateTemplate::class, '', '', 1)
+            ->paginate(PaginateTemplate::class, null, '', 1)
             ->resultsetObject();
     }
 }

@@ -1,14 +1,14 @@
 <?php 
 
 namespace GRDAR\Controllers;
-use Grdar\core\Facades\View;
-use Grdar\core\Routes\Router;
+use Grdar\core\Views\View;
 
 class IndexController
 {
-    public static function index()
+    public static function index($pagina = null)
     {
-        $_REQUEST['page'] = 'index';
+        $_GET['page'] = 'index';
+        $_GET['pagina'] = $pagina;
         return View::view('index');
     }
 }
