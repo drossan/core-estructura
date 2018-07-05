@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a35b39070752182fe63d53e50639b375",
+    "content-hash": "f6c9780075681374183bbe4325742413",
     "packages": [
         {
             "name": "filp/whoops",
@@ -69,16 +69,16 @@
         },
         {
             "name": "grdar/core",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drossan/php.git",
-                "reference": "7b502c04be962aa17b96d6fc03ab6f174871fd5e"
+                "reference": "28c33f141c35d04d66a831be1643f5ac9c46a892"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drossan/php/zipball/7b502c04be962aa17b96d6fc03ab6f174871fd5e",
-                "reference": "7b502c04be962aa17b96d6fc03ab6f174871fd5e",
+                "url": "https://api.github.com/repos/drossan/php/zipball/28c33f141c35d04d66a831be1643f5ac9c46a892",
+                "reference": "28c33f141c35d04d66a831be1643f5ac9c46a892",
                 "shasum": ""
             },
             "require-dev": {
@@ -102,7 +102,7 @@
                 }
             ],
             "description": "Mini framework PHP",
-            "time": "2018-02-17T15:07:22+00:00"
+            "time": "2018-07-05T06:11:07+00:00"
         },
         {
             "name": "psr/log",

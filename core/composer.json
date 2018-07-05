@@ -9,7 +9,7 @@
     }],
     "require": {
         "filp/whoops": "^2.1",
-        "grdar/core": "^2.0"
+        "grdar/core": "^2.1.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4"

@@ -3,11 +3,6 @@ namespace GRDAR\Mail;
 
 use Grdar\core\PHPMailer\PHPMailer;
 use Grdar\core\PHPMailer\phpmailerException;
-use GRDAR\Mail\TemplateCita;
-use GRDAR\Mail\TemplateContacto;
-use GRDAR\Mail\TemplatePedido;
-use GRDAR\Mail\TemplateFeedback;
-use GRDAR\Mail\TemplateCv;
 
 use stdClass;
 use Exception;
@@ -57,8 +52,8 @@ class Mail extends PHPMailer {
             
             $this->AltBody = '';
             $this->Body = $class::setbody($form);
-            $this->Subject = 'Petición de producto';
-            $this->setFrom(EMAIL_FROM, 'Opticas Florida');
+            $this->Subject = 'Subject';
+            $this->setFrom(EMAIL_FROM, 'Email From');
             $this->addAddress(EMAIL_TO);
 
             $send = $this->send();

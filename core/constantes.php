@@ -2,9 +2,9 @@
 
 // Configuración base de datos
 define("DB_HOST",  'localhost');
-define("DB_DATABASE",  'database');
+define("DB_DATABASE",  'test');
 define("DB_USERNAME",  'root');
-define("DB_PASSWORD",  'secret');
+define("DB_PASSWORD",  '');
 
 // Url base
 define("BASE_URL",  'http://core-estructura.test');
