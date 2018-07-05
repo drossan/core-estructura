@@ -12,6 +12,16 @@
     </div>
 </div>
 
-<?php 
+<div class="conatiner">
+    <div class="row justify-content-center">
+        <h3 class="text-center w-100 my-3">Ejemplo de paginación:</h3>
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <?php 
+            // prueba de paginación
+            Test::getTest();
+            echo Test::getPaginate();
+        ?>
 
-print_r(Test::getTest());
+    </div>
+</div>
