@@ -1,4 +1,5 @@
 <?php 
+define("ENV",  'development');
 
 // Configuración base de datos
 define("DB_HOST",  'localhost');
@@ -53,3 +54,7 @@ define('KEY_MAP_GOOGLE', 'AIzaSyAAOfEjPGoUxU7EZFysckWeYIxVCdwphoo');
 
 define('GOOGLE_AUTHOR', 'https://plus.google.com/u/0/103518895996174105658');
 define('GOOGLE_PUBLISHER', 'https://plus.google.com/u/0/103518895996174105658');
+
+
+// Caché twig
+define('PATH_CACHE', false);

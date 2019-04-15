@@ -1,14 +1,16 @@
 <?php 
-
 namespace GRDAR\Controllers;
+
+use TestFacade;
 use Grdar\core\Views\View;
 
-class IndexController
+class IndexController extends View
 {
-    public static function index($pagina = null)
+    public function index()
     {
-        $_GET['page'] = 'index';
-        $_GET['pagina'] = $pagina;
-        return View::view('index');
+        TestFacade::getTest();
+        return $this->renderHTML('index.twig', [
+            'paginate' => TestFacade::getPaginate()
+        ]);
     }
 }

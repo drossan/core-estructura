@@ -8,11 +8,11 @@ return [
     'Facades' => [
         'Rout'  => 'Router',
         'MailFacade'  => 'Mail',
-        'TestFacade'  => 'Test'
+        'Test'  => 'TestFacade'
     ],
     'Instances' => [
         'Rout'  => \Grdar\core\Routes\Router::class,
         'Mail'  => Mail\Mail::class,
-        'TestFacade'  => Test::class,
+        'Test'  => Test::class,
     ]
 ];
