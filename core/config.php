@@ -1,18 +1,18 @@
 <?php 
 namespace GRDAR;
 
+use Drossan\core\Routes\Router;
+
 return [
     'Controllers' =>  [
         'Index'  => Controllers\IndexController::class
     ],
     'Facades' => [
         'Rout'  => 'Router',
-        'MailFacade'  => 'Mail',
-        'Test'  => 'TestFacade'
+        'MailFacade'  => 'Mail'
     ],
     'Instances' => [
-        'Rout'  => \Grdar\core\Routes\Router::class,
-        'Mail'  => Mail\Mail::class,
-        'Test'  => Test::class,
+        'Rout'  => Router::class,
+        'Mail'  => Mail\Mail::class
     ]
 ];

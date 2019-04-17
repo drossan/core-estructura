@@ -1,16 +1,12 @@
 <?php 
 namespace GRDAR\Controllers;
 
-use TestFacade;
-use Grdar\core\Views\View;
+use Drossan\core\Controllers\Controller;
 
-class IndexController extends View
+class IndexController extends Controller
 {
     public function index()
     {
-        TestFacade::getTest();
-        return $this->renderHTML('index.twig', [
-            'paginate' => TestFacade::getPaginate()
-        ]);
+        return $this->renderHTML('index.twig');
     }
 }

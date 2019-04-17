@@ -1,21 +1,23 @@
 {
-    "name": "grdar/core-estructura",
+    "name": "drossan/core-estructura",
     "description": "Estructura inicial para un proyecto",
     "type": "project",
-    "license": "",
+    "license": "MIT",
     "authors": [{
-        "name": "Team developer GRDAR",
-        "email": "dani@grdar.com"
+        "name": "Team developer DROSSAN",
+        "email": "admin@drossan.com"
     }],
-    "require": {
-        "filp/whoops": "^2.1",
-        "grdar/core": "^2.1.0",
-        "zendframework/zend-diactoros": "^1.8",
-        "aura/router": "^3.1",
-        "twig/twig": "^1.38"
-    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "C:/xampp_7/htdocs/www/php"
+        }
+    ],
     "require-dev": {
-        "mockery/mockery": "^0.9.4"
+        "filp/whoops": "^2.3"
+    },
+    "require" : {
+        "drossan/core": "*"
     },
     "autoload": {
         "files": ["utils/helpers.php"],

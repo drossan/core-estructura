@@ -1,8 +1,8 @@
 <?php
 namespace GRDAR\Mail;
 
-use Grdar\core\PHPMailer\PHPMailer;
-use Grdar\core\PHPMailer\phpmailerException;
+use Drossan\core\PHPMailer\PHPMailer;
+use Drossan\core\PHPMailer\phpmailerException;
 
 use stdClass;
 use Exception;

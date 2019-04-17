@@ -1,7 +1,7 @@
 <?php
 namespace GRDAR;
 
-use GRDAR\Facades\CreateFacade;
+use Drossan\core\Facades\CreateFacade;
 
 $app = require_once __DIR__ .'/config.php';
 
