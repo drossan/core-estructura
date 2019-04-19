@@ -1,7 +1,8 @@
 <?php 
 namespace GRDAR;
 
-use Drossan\core\Routes\Router;
+use Drossan\core\Routes\Router,
+    Drossan\core\Database\Connection;
 
 return [
     'Controllers' =>  [
@@ -9,10 +10,12 @@ return [
     ],
     'Facades' => [
         'Rout'  => 'Router',
-        'MailFacade'  => 'Mail'
+        'MailFacade'  => 'Mail',
+        'Connection' => 'db'
     ],
     'Instances' => [
         'Rout'  => Router::class,
-        'Mail'  => Mail\Mail::class
+        'Mail'  => Mail\Mail::class,
+        'Connection' => Connection::class
     ]
 ];

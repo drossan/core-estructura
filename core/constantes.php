@@ -21,8 +21,7 @@ define('PAGE',  '/pagina/');
 define('LIMIT',  '/limit/');
 
 // Carpateas de includes y vistas
-define('PATH_INCLUDES',  'inc/');
-define('PATH_VIEWS',  'views/');
+define('PATH_VIEWS',  __DIR__ . '/../views/');
 
 // Idiomas de la app
 define('IDIOMAS', 'es/en');
