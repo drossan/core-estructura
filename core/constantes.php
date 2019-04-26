@@ -4,11 +4,11 @@ define("ENV",  'development');
 // Configuración base de datos
 define("DB_HOST",  'localhost');
 define("DB_DATABASE",  'test');
-define("DB_USERNAME",  'root');
-define("DB_PASSWORD",  '');
+define("DB_USERNAME",  'homestead');
+define("DB_PASSWORD",  'secret');
 
 // Url base
-define("BASE_URL",  'http://core-estructura.test');
+define("BASE_URL",  'http://core.test');
 
 // Hash para assets
 define("HASH",  '');
@@ -21,7 +21,7 @@ define('PAGE',  '/pagina/');
 define('LIMIT',  '/limit/');
 
 // Carpateas de includes y vistas
-define('PATH_VIEWS',  __DIR__ . '/../views/');
+define('ROOT_PATH',  __DIR__ . '/../');
 
 // Idiomas de la app
 define('IDIOMAS', 'es/en');

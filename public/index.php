@@ -5,6 +5,7 @@
 
     require_once __DIR__.'/../core/init.php';
 
+
     Rout::get('index', '/', 'Index', 'index');
     Rout::get('newUser', '/new', 'Index', 'newUser');
     Rout::post('addUser', '/add', 'index', 'addUser');

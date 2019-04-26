@@ -2,3 +2,9 @@
 /vendor
 
 core/vendor/
+
+core/composer\.json
+
+core/composer\.lock
+
+*.yml
