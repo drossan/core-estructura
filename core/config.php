@@ -2,7 +2,8 @@
 namespace GRDAR;
 
 use Drossan\core\Routes\Router,
-    Drossan\core\Database\Connection;
+    Drossan\core\Database\Connection,
+    Drossan\core\Middlewares;
 
 return [
     'Controllers' =>  [
@@ -17,5 +18,9 @@ return [
         'Rout'  => Router::class,
         'Mail'  => Mail\Mail::class,
         'Connection' => Connection::class
+    ],
+    'Middlewares' => [
+        'AuthenticationMiddleware' => Middlewares\AuthenticationMiddleware::class
     ]
+
 ];
