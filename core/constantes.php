@@ -22,6 +22,7 @@ define('LIMIT',  '/limit/');
 
 // Carpateas de includes y vistas
 define('ROOT_PATH',  __DIR__ . '/../');
+define('PATH_VIEWS',  __DIR__ . '/../views');
 
 // Idiomas de la app
 define('IDIOMAS', 'es/en');
@@ -44,15 +45,6 @@ define('PHPMAILER_ISHTML', true);
 
 define('EMAIL_FROM', 'test@test.com');
 define('EMAIL_TO', 'test@test.com');
-
-// GOOGLE
-define('CAPTCHA', '6LdQDTUUAAAAAKKAKnU3lsC93rbB87xVEO219sDG');
-define('CAPTCHA_SECRET', '6LdQDTUUAAAAAKUuxGL0RVpPfdn36kd5hz2DPL6_');
-
-define('KEY_MAP_GOOGLE', 'AIzaSyAAOfEjPGoUxU7EZFysckWeYIxVCdwphoo');
-
-define('GOOGLE_AUTHOR', 'https://plus.google.com/u/0/103518895996174105658');
-define('GOOGLE_PUBLISHER', 'https://plus.google.com/u/0/103518895996174105658');
 
 
 // Caché twig
