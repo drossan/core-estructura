@@ -17,4 +17,4 @@ Facade::setContainer($container);
 
 require_once __DIR__.'/app.php';
 
-if(ENV == 'development') new ErrorException();
+if(ENVIRONMENT == 'development') new ErrorException();

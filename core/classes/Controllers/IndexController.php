@@ -1,8 +1,8 @@
 <?php 
 namespace GRDAR\Controllers;
 
-use Drossan\core\Controllers\Controller;
-use GRDAR\Models\User;
+use Drossan\core\Controllers\Controller,
+    GRDAR\Models\User;
 
 class IndexController extends Controller
 {

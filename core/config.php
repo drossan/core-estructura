@@ -11,12 +11,10 @@ return [
     ],
     'Facades' => [
         'Rout'  => 'Router',
-        'MailFacade'  => 'Mail',
         'Connection' => 'db'
     ],
     'Instances' => [
         'Rout'  => Router::class,
-        'Mail'  => Mail\Mail::class,
         'Connection' => Connection::class
     ],
     'Middlewares' => [

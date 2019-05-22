@@ -1,9 +1,9 @@
 <?php 
-define("ENV",  'development');
+define("ENVIRONMENT",  'development');
 
 // Configuración base de datos
 define("DB_HOST",  'localhost');
-define("DB_DATABASE",  'test');
+define("DB_DATABASE",  'development_db');
 define("DB_USERNAME",  'homestead');
 define("DB_PASSWORD",  'secret');
 
