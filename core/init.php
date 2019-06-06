@@ -1,20 +1,20 @@
 <?php
 namespace GRDAR;
 
-use Grdar\core\Container;
-use Grdar\core\Facades\Facade;
+use Drossan\core\Container\Container,
+    Drossan\core\Error\ErrorException,
+    Drossan\core\Facades\Facade;
 
-/********************************************************/
-/*********************** CLASS **************************/
+if ( ! file_exists(__DIR__ . '/vendor/autoload.php'))
+    throw new Exception("Autoload file not found.");
+    
 require_once __DIR__.'/vendor/autoload.php';
 require_once __DIR__.'/constantes.php';
 
 // Uso de inyección de dependencias
-$container = Container::getInstance();
+$container = Container::init();
 Facade::setContainer($container);
 
 require_once __DIR__.'/app.php';
 
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-$whoops->register();
+if(ENVIRONMENT == 'development') new ErrorException();

@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block container %}
+<div class="container">
+    <div class="row mt-5">   
+        <div class="col-12 text-center">
+            {% if responseMessage %}
+            <div class="alert alert-primary" role="alert">
+                {{ responseMessage }}
+            </div>
+            {% endif %}
+
+            <div class="row align-items-center justify-content-center">
+                <form action="{% if user.id %}/edit{% else %}/add{% endif %}" method="post" enctype="multipart/form-data">
+                {% if user.id %} <input type="hidden" name="id" value="{{user.id}}">{% endif %}
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                    name="email" value="{% if user.email %} {{ user.email | raw }}  {% endif %}">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Añadir usuario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

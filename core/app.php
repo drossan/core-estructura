@@ -1,7 +1,9 @@
 <?php
 namespace GRDAR;
 
-use GRDAR\Facades\CreateFacade;
+use Drossan\core\Facades\CreateFacade,
+    Drossan\core\Container\Container,
+    Drossan\core\Middlewares\Load;
 
 $app = require_once __DIR__ .'/config.php';
 
@@ -17,9 +19,14 @@ foreach ($app as $key => $value) {
                 new CreateFacade($facade, $k);
             }
             break;
+        case 'Middlewares':
+            foreach ($value as $k => $middleware) {
+                Load::loadMiddleware($middleware);
+            }
+            break;
         default:
             foreach ($value as $k => $instance) {
-                $container->instance($k, new $instance);
+                Container::setConatiner($k, new $instance);
             }
             break;
     }

@@ -1,14 +1,70 @@
 <?php 
-
 namespace GRDAR\Controllers;
-use Grdar\core\Views\View;
 
-class IndexController
+use Drossan\core\Controllers\Controller,
+    GRDAR\Models\User;
+
+class IndexController extends Controller
 {
-    public static function index($pagina = null)
+    public function index()
     {
-        $_GET['page'] = 'index';
-        $_GET['pagina'] = $pagina;
-        return View::view('index');
+        return $this->renderHTML('index.twig', [
+            'users' => User::get()
+        ]);
     }
+
+    public function indexTest()
+    {
+        return $this->renderHTML('index.twig', [
+            'users' => User::get()
+        ]);
+    }
+
+    public function newUser()
+    {
+        return $this->renderHTML('newUser.twig');
+    }
+
+    public function addUser($request)
+    {
+        $responseMessage = null;
+
+        if ($request->getMethod() == 'POST') {
+            $postData = $request->getParsedBody();
+            try {
+                $job = new User();
+                $job->email = $postData['email'];
+                $job->save();
+                $responseMessage = 'Registro insertado';
+            } catch (\Exception $e) {
+                $responseMessage = $e->getMessage();
+            }
+        }
+        return $this->renderHTML('newUser.twig', [
+            'responseMessage' => $responseMessage
+        ]);
+    }
+
+    public function editUser($request)
+    {
+        $responseMessage = null;
+
+        if ($request->getMethod() == 'POST') {
+            $postData = $request->getParsedBody();
+            try {
+                $user = User::find($postData['id']);
+                $user->email = $postData['email'];
+                $user->save();
+                $responseMessage = 'Registro actualizado';
+            } catch (\Exception $e) {
+                $responseMessage = $e->getMessage();
+            }
+            $params = ['responseMessage' =>  $responseMessage];
+        }else{
+            $user = $request->getAttribute('user');
+            $params = ['user' => User::find($user)];
+        }
+        return $this->renderHTML('newUser.twig', $params);
+    }
+
 }
