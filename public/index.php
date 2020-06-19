@@ -1,5 +1,5 @@
 <?php
-    ob_start();
+   /* ob_start();
 
     session_status() != PHP_SESSION_NONE ?? session_start();
 
@@ -18,4 +18,6 @@
 
     Rout::run();
 
-    ob_end_flush();
+    ob_end_flush(); */
+
+print_r($_REQUEST);
